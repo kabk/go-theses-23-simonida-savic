@@ -118,8 +118,9 @@ a:focus-visible {
 h1{
   /* h1 style */
  font-family: Basteleur;
- font-size: 150px;
+ font-size: 130px;
  font-style: italic;
+ line-height: 0.6;
 }
 
 h2{
@@ -140,8 +141,9 @@ h4, h5, h6{
 p{
   /* paragraph style */
   font-family: Latitude;
-  font-size: 35px;
+  font-size: 25px;
   padding-left: 40%;
+  line-height: 1.4;
 }
 
 ol, ul{
@@ -185,18 +187,138 @@ summary{
 
 
 .window {
-  width: max(480px, 40%);
+  width: max(450px, 20%);
   max-width: 100%;
-  height: 300px;
-  padding: 1rem;
-
-  border: 2px solid #000;
-  background: lightcoral;
+  height: 650px;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgb(31, 83, 255);
+  border: 2px solid rgb(31, 83, 255);
+  border-radius: 3px;
+  background: rgb(255, 255, 255);
   display: inline-block;
   overflow-y: auto;
 }
 
 .window p { padding-left: 0 }
+
+.window-2 {
+  width: max(450px, 20%);
+  max-width: 100%;
+  height: 650px;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgb(31, 83, 255);
+  border: 2px solid rgb(31, 83, 255);
+  border-radius: 3px;
+  background: rgb(255, 255, 255);
+  display: inline-block;
+  overflow-y: auto;
+}
+
+.window-2 p { padding-left: 0 }
+
+.window-3 {
+  width: max(450px, 20%);
+  max-width: 100%;
+  height: 650px;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgb(31, 83, 255);
+  border: 2px solid rgb(31, 83, 255);
+  border-radius: 3px;
+  background: rgb(255, 255, 255);
+  display: inline-block;
+  overflow-y: auto;
+}
+
+.window-3 p { padding-left: 0 }
+
+.window-4 {
+  width: max(450px, 20%);
+  max-width: 100%;
+  height: 650px;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgb(31, 83, 255);
+  border: 2px solid rgb(31, 83, 255);
+  border-radius: 3px;
+  background: rgb(255, 255, 255);
+  display: inline-block;
+  overflow-y: auto;
+}
+
+.window-4 p { padding-left: 0 }
+
+.window-5 {
+  width: max(450px, 20%);
+  max-width: 100%;
+  height: 650px;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgb(31, 83, 255);
+  border: 2px solid rgb(31, 83, 255);
+  border-radius: 3px;
+  background: rgb(255, 255, 255);
+  display: inline-block;
+  overflow-y: auto;
+}
+
+.window-5 p { padding-left: 0 }
+
+.window-6 {
+  width: max(450px, 20%);
+  max-width: 100%;
+  height: 650px;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgb(31, 83, 255);
+  border: 2px solid rgb(31, 83, 255);
+  border-radius: 3px;
+  background: rgb(255, 255, 255);
+  display: inline-block;
+  overflow-y: auto;
+}
+
+.window-6 p { padding-left: 0 }
+
+.window-7 {
+  width: max(450px, 20%);
+  max-width: 100%;
+  height: 650px;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgb(31, 83, 255);
+  border: 2px solid rgb(31, 83, 255);
+  border-radius: 3px;
+  background: rgb(255, 255, 255);
+  display: inline-block;
+  overflow-y: auto;
+}
+
+.window-7 p { padding-left: 0 }
+
+.window-8 {
+  width: max(450px, 20%);
+  max-width: 100%;
+  height: 650px;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgb(31, 83, 255);
+  border: 2px solid rgb(31, 83, 255);
+  border-radius: 3px;
+  background: rgb(255, 255, 255);
+  display: inline-block;
+  overflow-y: auto;
+}
+
+.window-8 p { padding-left: 0 }
+
+.bibliography {
+width: max(400px, 30%);
+max-width: 100%;
+height: 800px;
+padding: 0.5rem;
+border: 2px solid rgb(31, 83, 255);
+border-radius: 3px;
+background: rgb(178, 182, 198);
+display: block;
+margin-left: auto;
+margin-right: auto;
+overflow-y: auto;
+}
 
 /* GENERAL USABILITY */
 

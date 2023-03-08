@@ -134,6 +134,7 @@ h2{
 
 h3{
   /* h3 style */
+  font-family: 
 }
 
 h4, h5, h6{
@@ -144,6 +145,23 @@ p{
   /* paragraph style */
   font-family: Latitude;
   font-size: 25px;
+  padding-left: 40%;
+  line-height: 1.4;
+}
+
+.littlefoot-footnote{
+  transform:none!important;
+  left:0!important;
+}
+
+.littlefoot-footnote__content{
+  width:10vw;
+}
+
+.littlefoot-footnote__content p{
+  /* paragraph style */
+  font-family: Latitude;
+  font-size: 16px;
   padding-left: 40%;
   line-height: 1.4;
 }

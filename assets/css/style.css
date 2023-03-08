@@ -79,6 +79,10 @@
 
 /* GENERAL STYLES */
 
+
+html, body {
+  scroll-behavior: smooth;
+}
 html {
   font: var(--font-size) var(--font-family);
   color: var(--color-text);
@@ -100,6 +104,10 @@ body {
   display: none;
 }
 
+
+hr { 
+  /* opacity: 0  */
+}
 a {
   color: var(--color-text-link);
   text-decoration: underline;

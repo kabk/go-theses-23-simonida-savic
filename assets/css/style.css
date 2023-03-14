@@ -99,15 +99,9 @@ src: url('../fonts/RedHat/Variable/RedHatDisplay-Variable.ttf'),
 
 /* GENERAL STYLES */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 html, body {
   scroll-behavior: smooth;
-  
   
 }
 html {
@@ -123,6 +117,7 @@ body {
   color: var(--color-text);
   width:100%;
   height:auto;
+  overflow-y: scroll;
   bottom: 120px;
   margin-top: 100px;
 }
@@ -137,15 +132,12 @@ body {
   width: 0;
   transition: width 0.1s ease;
   margin-left: -30px;
-  
 }
 
-body {
-    overflow: auto;
-}
 ::-webkit-scrollbar {
-    display: none;
-  }
+  display: none;
+}
+
 
 hr { 
   /* opacity: 0  */
@@ -259,6 +251,7 @@ ol, ul{
 blockquote{
   /* blockquote element style */
 }
+
 
 
 

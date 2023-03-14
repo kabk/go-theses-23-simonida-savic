@@ -93,6 +93,7 @@ src: url('../fonts/RedHat/Variable/RedHatDisplay-Variable.ttf'),
   --font-size: 24px;
   /* Margins settings */
   --margin: 1rem;
+  z-index: 1;
 }
 
 
@@ -102,13 +103,13 @@ src: url('../fonts/RedHat/Variable/RedHatDisplay-Variable.ttf'),
 
 html, body {
   scroll-behavior: smooth;
+  cursor: none;
   
 }
 html {
   font: var(--font-size) var(--font-family);
   color: var(--color-text);
   background-color: var(--color-background);
-  cursor: none;
   scrollbar-width: none;
 }
 
@@ -127,17 +128,15 @@ body {
 	overflow-y: none;
 }
 
-#circularcursor {
-  background-color: transparent;
-  border:1px solid black;    
-  height:20px;
-  width:20px;
-  border-radius:50%;
-  -moz-border-radius:50%;
-  -webkit-border-radius:50%;
-  position: absolute;
-  z-index: 99;
+.big{
+  width: 60px;
+  height: 60px;
+  background-color: rgba(165, 255, 113, 0.972);
+  border-radius: 50%;
+  filter: blur(8px) !important;
+  z-index: 2000 !important;
 }
+
 
 #scroll {
   z-index: 1;
@@ -154,7 +153,6 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
-
 
 hr { 
   opacity: 0; 
@@ -191,18 +189,20 @@ h2{
   padding-left: 40%;
   padding-top: 10%;
   color:rgb(31, 83, 255);
+  font-size: calc(2.5vw);
 }
 
 .collapsible {
   background-color: rgba(85, 85, 85, 0);
   color: rgba(85, 85, 85, 0);
-  cursor: pointer;
+  cursor: pointer;  
   padding: 18px;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
   font-size: 15px;
+  height: 200px;
 }
 
 .active, .collapsible:hover {
@@ -223,6 +223,8 @@ h3{
   font-size: 35px;
   padding-left: 40%;
   color:rgb(31, 83, 255);
+  font-size: calc(2.5vw);
+  line-height: 1.5;
 }
 
 h4, h5, h6{
@@ -233,7 +235,7 @@ p{
   /* paragraph style */
   font-family: Latitude;
   font-size: 25px;
-  padding-left: 40%;
+  padding-left: 46%;
   line-height: 1.4;
 }
 

@@ -108,6 +108,8 @@ html {
   font: var(--font-size) var(--font-family);
   color: var(--color-text);
   background-color: var(--color-background);
+  cursor: none;
+  scrollbar-width: none;
 }
 
 body {
@@ -125,6 +127,17 @@ body {
 	overflow-y: none;
 }
 
+#circularcursor {
+  background-color: transparent;
+  border:1px solid black;    
+  height:20px;
+  width:20px;
+  border-radius:50%;
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+  position: absolute;
+  z-index: 99;
+}
 
 #scroll {
   z-index: 1;
@@ -168,14 +181,15 @@ h1{
  font-style: italic;
  line-height: 0.6;
  white-space: nowrap;
- font-size: calc(1.5rem + 5.5vw);
+ font-size: calc(7.5vw);
 }
 
 h2{ 
   /* h2 style */
-  font-family: SpaceGrotesk;
-  font-size: 25px;
+  font-family: Basteleur;
+  font-size: 35px;
   padding-left: 40%;
+  padding-top: 10%;
   color:rgb(31, 83, 255);
 }
 
@@ -205,8 +219,8 @@ h2{
 
 h3{
   /* h3 style */
-  font-family: SpaceGrotesk;
-  font-size: 25px;
+  font-family: Basteleur;
+  font-size: 35px;
   padding-left: 40%;
   color:rgb(31, 83, 255);
 }
@@ -309,12 +323,15 @@ img{
   max-width: 100%;
   height: 650px;
   padding: 1.5rem;
-  box-shadow: 0 0 20px rgb(31, 83, 255);
+  box-shadow: 0 0 30px rgb(31, 83, 255);
   border: 2px solid rgb(31, 83, 255);
   border-radius: 3px;
   background: rgb(255, 255, 255);
   display: inline-block;
   overflow-y: auto;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+	scrollbar-width: none; /* for Firefox */
+	overflow-y: none;
 }
 
 .window p { padding-left: 0 }

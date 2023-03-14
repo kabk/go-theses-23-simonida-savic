@@ -55,3 +55,18 @@ window.addEventListener('scroll', function(){
   var width = ((scrolledPixels / height) * 100).toFixed(2);
   scrollElement.style.width = width + '%';
 });
+
+document.body.onmousemove = function(e) {
+  document.documentElement.style.setProperty (
+    '--x', (
+      e.clientX+window.scrollX
+    )
+    + 'px'
+  );
+  document.documentElement.style.setProperty (
+    '--y', (
+      e.clientY+window.scrollY
+    ) 
+    + 'px'
+  );
+}

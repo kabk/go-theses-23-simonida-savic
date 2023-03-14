@@ -120,18 +120,22 @@ body {
   overflow-y: scroll;
   bottom: 120px;
   margin-top: 100px;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+	scrollbar-width: none; /* for Firefox */
+	overflow-y: none;
 }
 
 
 #scroll {
-  z-index: 100;
+  z-index: 1;
   position: fixed;
   top: 0;
-  height: 3px;
-  background-image: linear-gradient(120deg, #F27121, #E94057, #8A2387);
-  width: 0;
+  height: 100%;
+  background-image: linear-gradient(180deg, rgba(255,0,0,0), rgba(165, 255, 113, 0.895) );
+  width: 10px;
   transition: width 0.1s ease;
   margin-left: -30px;
+  filter: blur(15px);
 }
 
 ::-webkit-scrollbar {
@@ -140,7 +144,7 @@ body {
 
 
 hr { 
-  /* opacity: 0  */
+  opacity: 0; 
 }
 a {
   color: var(--color-text-link);
@@ -538,51 +542,6 @@ font-size: medium;
   :root{ --font-size: 30px; } html, body {font: var(--font-size) var(--font-family);}
 }
 
-/* @media (max-width: 450px) {
-  h1 {
-    font-size: 32.5px;
-  }
-}
-
-@media (min-width: 450px) and (max-width: 800px) {
-  h1 {
-    font-size: 65px;
-  }
-}
-
-@media (min-width: 1200px) {
-  h1 {
-    font-size: 130px;
-  }
-} */
-
-/* :root { */
-  /* Declare without units so we can compute the slope */
-  /* --min-vw: 414;
-  --max-vw: 768;
-  --min-h1-font-size: 32;
-  --max-h1-font-size: 48; */
-
-  /* m = (y2 - y1) / (x2 - x1)  */
-  /* --rise: calc(var(--max-h1-font-size) - var(--min-h1-font-size));
-  --run: calc(var(--max-vw) - var(--min-vw));
-  --slope: calc(var(--rise) / var(--run));
-} */
-
-/* h1 { */
-  /* Due to the way addition and subtraction works in calc(), we need to
-    "type cast" --min-vw and --min-h1-font-size to appropriate units */
-  /* --min-vw-px: calc(var(--min-vw) * 1px);
-  --min-h1-font-size-px: calc(var(--min-h1-font-size) * 1px); */
-
-  /* y - y1 = m(x - x1) */
-  /* --fluid-font-size-px: calc(
-    var(--slope) * (100vw - var(--min-vw-px)) + var(--min-h1-font-size-px)
-  );
-
-  font-size: var(--fluid-font-size-px);
-} */
-
 
 /* website media queries */
 
@@ -590,10 +549,6 @@ font-size: medium;
 
   /* styles for screen sizes 779px, should covers 'mobile' and 'tablet' */
   /* style this one first and then use the two others to 'override' some styles (exceptions/details) */
-
-
-
-
 
 
   /* utilities */

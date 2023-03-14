@@ -103,7 +103,6 @@ src: url('../fonts/RedHat/Variable/RedHatDisplay-Variable.ttf'),
 
 html, body {
   scroll-behavior: smooth;
-  cursor: none;
   
 }
 html {

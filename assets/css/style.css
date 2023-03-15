@@ -47,7 +47,7 @@
 }
 
 @font-face {
-  font-family: Azeret_Italic;
+  font-family: Azeret-Italic;
   src: url('../fonts/Azeret/AzeretMono-Italic.ttf'),
        url('../fonts/Azeret/AzeretMono-Italic.woff') format('embedded-opentype'),
        url('../fonts/Azeret/AzeretMono-Italic.woff2') format('truetype');
@@ -161,6 +161,37 @@ body {
   display: none;
 }
 
+.progress-container {
+	position: fixed;
+	left: 10px;
+	width: 2px;
+	height: 100%;
+	background-image: linear-gradient(180deg, rgb(255, 255, 255),rgb(108, 108, 108));
+	margin: auto;
+  border-radius: 3px;
+}
+
+.progress-bar {
+	width: 2px;
+	background:rgba(165, 255, 113, 0.972);
+	border-radius: 3px;
+}
+
+.progress-bar:before {
+	height: 0%;
+}
+
+.glow {
+	-webkit-box-shadow: 0px 10px 10px 5px rgba(165, 255, 113, 0.972);
+	-moz-box-shadow: 0px 10px 10px 5px rgba(165, 255, 113, 0.972);
+	box-shadow: 0px 10px 10px 5px rgba(165, 255, 113, 0.972);
+}
+
+.wrapper {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 hr { 
   opacity: 0; 
 }
@@ -187,23 +218,25 @@ h1{
  line-height: 0.6;
  white-space: nowrap;
  font-size: calc(7.5vw);
+ color:rgb(108, 108, 108);
 }
 
 h2{ 
   /* h2 style */
   font-family: Basteleur;
   font-size: 35px;
-  padding-left: 40%;
+  padding-left: 45%;
   padding-top: 10%;
   color:rgb(31, 83, 255);
   font-size: calc(2.5vw);
+  text-decoration-line: underline;
 }
 
 .collapsible {
   background-color: rgba(85, 85, 85, 0);
   color: rgba(85, 85, 85, 0);
   cursor: pointer;  
-  padding: 18px;
+  padding-top: 18px;
   width: 100%;
   border: none;
   text-align: left;
@@ -228,10 +261,11 @@ h3{
   /* h3 style */
   font-family: Basteleur;
   font-size: 35px;
-  padding-left: 40%;
+  padding-left: 45%;
   color:rgb(31, 83, 255);
   font-size: calc(2.5vw);
   line-height: 1.5;
+  text-decoration-line: underline;
 }
 
 h4, h5, h6{
@@ -242,14 +276,15 @@ p{
   /* paragraph style */
   font-family: Latitude;
   font-size: 25px;
-  padding-left: 46%;
+  padding-left: 48%;
   line-height: 1.4;
+  font-size: calc(1.25vw);
 }
 
 
 main p{
-  font-family: SpaceGrotesk !important;
-  font-size: 20px !important;
+  font-family: Azeret-Italic !important;
+  font-size: 18px !important;
   width: 40vw;
   line-height: 1.7;
 }
@@ -326,12 +361,20 @@ img{
 }
 
 #myBtn:hover {
-  background-color: rgb(31, 83, 255);
+  background-color: rgba(165, 255, 113, 0.972);
 }
 
 .btn-back-to-top {
   position: absolute;
-  top: 1.75rem; right: .5rem;
+  top: 0.75rem; right: 0.75rem;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  filter: blur(0px);
+  background-color: rgba(165, 255, 113, 0.972);
+  box-shadow: 0 0 15px rgb(108, 108, 108);
+  border: 2px solid;
+  border-color:rgb(255, 255, 255);
 }
 .window, .bibliography {
   position: relative;
@@ -548,7 +591,7 @@ font-size: medium;
 
 /* responsive typeface */
 
-@media (max-width: 298px) { 
+/* @media (max-width: 298px) { 
   :root{ --font-size: 15px; } html, body {font: var(--font-size) var(--font-family);} 
 }
 @media (min-width: 299px) and (max-width: 339px) { 
@@ -580,12 +623,15 @@ font-size: medium;
 }
 @media (min-width: 1880px) { 
   :root{ --font-size: 30px; } html, body {font: var(--font-size) var(--font-family);}
-}
+} */
 
 
 /* website media queries */
 
-@media (max-width: 1200px) {
+@media (max-width: 600px) {
+  body {
+    margin: 0;
+  }
 
   /* styles for screen sizes 779px, should covers 'mobile' and 'tablet' */
   /* style this one first and then use the two others to 'override' some styles (exceptions/details) */
@@ -596,34 +642,6 @@ font-size: medium;
   .desktop{display:none!important;}
   .mobile{display:block;}
 
-}
-
-
-
-@media (max-width: 339px) {
-
-  /* use this query to apply style changes to smaller smartphones sizes (like an iPhone 5S or SE 2016), max size of 339px */
-
-}
-
-
-
-@media (max-width: 779px) and (orientation: landscape) {
-
-  /* use this query to apply style changes for 'mobile' screen sizes that are flipped in 'landscape' mode */
-
-}
-
-
-
-@media (min-width: 780px) and (max-width: 992px) {
-
-  /* use this query to apply style for 'small' desktop screens */
-
-}
-
-body {
-  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 

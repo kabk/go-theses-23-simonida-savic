@@ -268,8 +268,18 @@ h3{
   text-decoration-line: underline;
 }
 
-h4, h5, h6{
+.group {
+  position: relative;
+}
+.group h4{
   /* h4-h5-h6 style */
+  position: sticky;
+  top: 50vh;
+  transform: translateY(-50%);
+  padding: 10em 0;
+  text-decoration: underline;
+  font-style: italic;
+
 }
 
 p{
@@ -278,7 +288,7 @@ p{
   font-size: 25px;
   padding-left: 48%;
   line-height: 1.4;
-  font-size: calc(1.25vw);
+  font-size: clamp(16px, 1.25vw, 32px);
 }
 
 
@@ -344,7 +354,7 @@ summary{
 
 img{
   max-width: 100%;
-  height: auto;
+  height: auto !important;
   display: block;
 }
 
@@ -629,8 +639,20 @@ font-size: medium;
 /* website media queries */
 
 @media (max-width: 600px) {
+  html, body { overflow-x: hidden }
   body {
+    bottom: 0;
     margin: 0;
+  }
+
+  .window, .bibliography {
+    width: 100%;
+    height: auto;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    padding: 1rem;
+    box-sizing: border-box;
+
   }
 
   /* styles for screen sizes 779px, should covers 'mobile' and 'tablet' */

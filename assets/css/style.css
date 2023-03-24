@@ -85,7 +85,7 @@ src: url('../fonts/RedHat/Variable/RedHatDisplay-Variable.ttf'),
 :root {
   /* Color settings */
     background-image: linear-gradient(180deg, rgba(255,0,0,0), rgb(219, 219, 219), rgb(209, 209, 209), rgb(185, 185, 185), rgb(179, 179, 179), rgb(150, 155, 175), rgb(152, 180, 233), rgb(166, 182, 255), rgb(140, 161, 255), rgb(98, 95, 255), rgb(67, 111, 255), rgb(31, 83, 255) );
-  --color-text: rgba(0,0,0,1);
+  --color-text:rgba(0, 0, 0, 0.8);
   --color-text-link: rgba(0,0,255,0.8);
   --color-text-link-hover: rgba(0,0,255,0.4);
   /* Font settings */
@@ -94,6 +94,7 @@ src: url('../fonts/RedHat/Variable/RedHatDisplay-Variable.ttf'),
   /* Margins settings */
   --margin: 1rem;
   z-index: 1;
+  padding-left: 0.5em;
 }
 
 * { 
@@ -131,6 +132,15 @@ body {
 	overflow-y: none;
 }
 
+/* #background_image1{
+  background-image: url('../images/head_images/BACKGROUND_1.jpg');
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  z-index: 999;
+  margin: 0;
+} */
+
 .big{
   position:fixed;
   top: 0; left: 0;
@@ -142,7 +152,6 @@ body {
   pointer-events: none;
   z-index: 2000 !important;
 }
-
 
 #scroll {
   position: fixed;
@@ -219,6 +228,7 @@ h1{
  white-space: nowrap;
  font-size: calc(7.5vw);
  color:rgb(108, 108, 108);
+ 
 }
 
 h2{ 
@@ -274,12 +284,15 @@ h3{
 .group h4{
   /* h4-h5-h6 style */
   position: sticky;
-  top: 50vh;
+  top: 80vh;
   transform: translateY(-50%);
   padding: 10em 0;
-  text-decoration: underline;
-  font-style: italic;
-
+  /* text-decoration: underline; */
+  /* font-style: italic; */
+  font-family: Azeret;
+  padding-left: 0.4em;
+  color:rgb(108, 108, 108);
+  font-size: 16px;
 }
 
 p{
@@ -293,10 +306,11 @@ p{
 
 
 main p{
-  font-family: Azeret-Italic !important;
-  font-size: 18px !important;
+  font-family: Azeret !important;
+  font-size: 16px !important;
   width: 40vw;
-  line-height: 1.7;
+  line-height: 1.6;
+
 }
 
 .littlefoot-footnote{
@@ -358,6 +372,18 @@ img{
   display: block;
 }
 
+.grid-item{
+  position: absolute;
+  display: inline-block;
+  z-index: -10;
+}
+
+.random-pane {
+  vertical-align: top;
+  height: 100%;
+  width: 100%;
+}
+
 #myBtn {
   display: none;
   position: absolute;
@@ -386,6 +412,7 @@ img{
   border: 2px solid;
   border-color:rgb(255, 255, 255);
 }
+
 .window, .bibliography {
   position: relative;
 }

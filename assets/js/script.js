@@ -1,4 +1,5 @@
 // functions go here
+
 window.addEventListener( 'resize', ( ) => {
     const windows = document.querySelectorAll( '.window' );
     
@@ -124,3 +125,31 @@ const positionElement = (e)=> {
 }
 
 window.addEventListener('mousemove', positionElement)
+
+var clr = "#" + ((1 << 24) * Math.random() | 0).toString(16);
+
+// this statement sets the background color of the div with class .container to red
+var pane_width = $(".random-pane").width() - $(".grid-item").width();
+var pane_height = $(".random-pane").height() - $(".grid-item").height();
+
+// loop through all the items in the random-pane
+$(".random-pane").children().each(function () {
+
+   // get a random x position
+   var x = Math.round(Math.random() * pane_width) * 1;
+   // get a random y position
+   var y = Math.round(Math.random() * pane_height) * -2;
+
+   // change the position of the item
+   $(this).css("top", y);
+   $(this).css("left", x);
+
+   // add hover functionality, to move item to the top on hover
+   $(this).on("mouseover", function () {
+       // this is a small hack, removing it and adding it again moves it to the top
+       $(this).parent().append(this);
+   });
+
+});
+
+

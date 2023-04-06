@@ -305,10 +305,14 @@ p{
 }
 
 
-main p{
+main h2, main h3 {
+  padding-left: 20%;
+}
+main p {
   font-family: Azeret !important;
   font-size: 16px !important;
   width: 40vw;
+  padding-left: 23%;
   line-height: 1.6;
 
 }
@@ -371,17 +375,34 @@ img{
   height: auto !important;
   display: block;
 }
-
+/* 
 .grid-item{
   position: absolute;
   display: inline-block;
-  z-index: -10;
-}
+  z-index: 1;
+} */
 
+
+/* 
 .random-pane {
   vertical-align: top;
   height: 100%;
   width: 100%;
+} */
+
+.random-pane-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+}
+.random-pane-grid .cell img {
+  scale: 1;
+  transition: scale .1s;
+}
+.random-pane-grid .cell:hover img {
+  scale: 2;
+  filter: drop-shadow(0 0 10px #4444dd);
+  z-index: +1;
 }
 
 #myBtn {
@@ -680,6 +701,12 @@ font-size: medium;
     padding: 1rem;
     box-sizing: border-box;
 
+  }
+
+  .random-pane-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0px 0px;
   }
 
   /* styles for screen sizes 779px, should covers 'mobile' and 'tablet' */

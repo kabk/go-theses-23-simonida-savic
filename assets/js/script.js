@@ -1,3 +1,33 @@
+$.fn.randomize = function(selector){
+  (selector ? this.find(selector) : this).parent().each(function(){
+      $(this).children(selector).sort(function(){
+          return Math.random() - 0.5;
+      }).detach().appendTo(this);
+  });
+
+  return this;
+};
+
+$( '.random-pane-grid' ).randomize( '.cell' );
+$( '.cell' ).each( function( index, cell ) {
+  $( this ).css( 'margin-top', ( Math.random( ) * 100 - 50 ) + 'px' );
+
+
+  $( this ).css( 'margin-left', ( Math.random( ) * 100 - 50 ) + 'px' );
+
+
+  // const verticalAlignOptions = [ 'top', 'center', 'bottom' ];
+  // const verticalAlignIndex = Math.floor( Math.random( ) * verticalAlignOptions.length );
+  // $( this ).css( { 'display': 'flex',
+  //             'align-items': verticalAlignOptions[ verticalAlignIndex ],
+  //             'justify-content': 'center' } );
+} );
+$( 'main' ).addClass( 'cell' )
+           .css( 'grid-column', 'auto / span 3' )
+           .appendTo( $( '.random-pane-grid' ) );
+
+
+
 // functions go here
 
 window.addEventListener( 'resize', ( ) => {
@@ -35,7 +65,7 @@ window.onscroll = () => {
 	}
 };
 
-const menuBtns = document.querySelectorAll( 'nav ul li a' );
+const menuBtns = document.querySelectorAll( 'nav ul li a, a.grid-item' );
 menuBtns.forEach( btn => {
   btn.addEventListener( 'click', ( ) => {
     const windows = document.querySelectorAll( '.window' );
@@ -127,7 +157,7 @@ const positionElement = (e)=> {
 window.addEventListener('mousemove', positionElement)
 
 var clr = "#" + ((1 << 24) * Math.random() | 0).toString(16);
-
+/* 
 // this statement sets the background color of the div with class .container to red
 var pane_width = $(".random-pane").width() - $(".grid-item").width();
 var pane_height = $(".random-pane").height() - $(".grid-item").height();
@@ -152,4 +182,4 @@ $(".random-pane").children().each(function () {
 
 });
 
-
+*/

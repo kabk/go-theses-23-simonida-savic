@@ -10,10 +10,10 @@ $.fn.randomize = function(selector){
 
 $( '.random-pane-grid' ).randomize( '.cell' );
 $( '.cell' ).each( function( index, cell ) {
-  $( this ).css( 'margin-top', ( Math.random( ) * 100 - 50 ) + 'px' );
+  $( this ).css( 'margin-top', ( Math.random( ) * 200 - 20 ) + 'px' );
 
 
-  $( this ).css( 'margin-left', ( Math.random( ) * 100 - 50 ) + 'px' );
+  $( this ).css( 'margin-left', ( Math.random( ) * 100 - 10 ) + 'px' );
 
 
   // const verticalAlignOptions = [ 'top', 'center', 'bottom' ];
@@ -23,7 +23,7 @@ $( '.cell' ).each( function( index, cell ) {
   //             'justify-content': 'center' } );
 } );
 $( 'main' ).addClass( 'cell' )
-           .css( 'grid-column', 'auto / span 3' )
+           .css( 'grid-column', 'auto / span 2' )
            .appendTo( $( '.random-pane-grid' ) );
 
 

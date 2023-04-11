@@ -235,7 +235,7 @@ h2{
   /* h2 style */
   font-family: Basteleur;
   font-size: 35px;
-  padding-left: 45%;
+  /* padding-left: 45%; */
   padding-top: 10%;
   color:rgb(31, 83, 255);
   font-size: calc(2.5vw);
@@ -273,7 +273,7 @@ h3{
   font-size: 35px;
   padding-left: 45%;
   color:rgb(31, 83, 255);
-  font-size: calc(2.5vw);
+  font-size: calc(2vw);
   line-height: 1.5;
   text-decoration-line: underline;
 }
@@ -293,6 +293,7 @@ h3{
   padding-left: 0.4em;
   color:rgb(108, 108, 108);
   font-size: 16px;
+  font-size: calc(1vw);
 }
 
 p{
@@ -306,15 +307,16 @@ p{
 
 
 main h2, main h3 {
-  padding-left: 20%;
+  padding-left: 7%;
 }
+
 main p {
   font-family: Azeret !important;
-  font-size: 16px !important;
-  width: 40vw;
-  padding-left: 23%;
+  /* font-size: 16px !important; */
+  width: 38vw;
+  padding-left: 10%;
   line-height: 1.6;
-
+  font-size: calc(0.8vw);
 }
 
 .littlefoot-footnote{
@@ -372,7 +374,7 @@ summary{
 
 img{
   max-width: 100%;
-  height: auto !important;
+  /* height: auto !important; */  
   display: block;
 }
 /* 
@@ -397,11 +399,11 @@ img{
 }
 .random-pane-grid .cell img {
   scale: 1;
-  transition: scale .1s;
+  transition: scale .3s;
 }
 .random-pane-grid .cell:hover img {
-  scale: 2;
-  filter: drop-shadow(0 0 10px #4444dd);
+  scale: 2.5;
+  filter: drop-shadow(0 0 4px rgba(31, 83, 255));
   z-index: +1;
 }
 
@@ -604,6 +606,8 @@ display: block;
 margin-left: auto;
 margin-right: auto;
 overflow-y: auto;
+-ms-overflow-style: none; /* for Internet Explorer, Edge */
+scrollbar-width: none; /* for Firefox */
 }
 
 .bibliography p {
@@ -691,6 +695,8 @@ font-size: medium;
   body {
     bottom: 0;
     margin: 0;
+    cursor: none;
+    width: 100% !important;
   }
 
   .window, .bibliography {
@@ -702,16 +708,56 @@ font-size: medium;
     box-sizing: border-box;
 
   }
-
+  
   .random-pane-grid{
-    display: grid;
+    display: table-header-group;
     grid-template-columns: 1fr;
-    gap: 0px 0px;
+    scale: 1;
+    filter: drop-shadow(0 0 5px rgba(31, 83, 255));
+    margin-top: 0px !important;
+    margin-left: 0px !important;
   }
 
+  img{
+    max-width: 100% !important;
+    height: auto !important;  
+    display: block;
+  }
+
+  h1{
+    /* h1 style */
+   white-space: nowrap;
+   font-size: 30px !important;
+  }
+
+  main h2, main h3 {
+    padding-left: 0%;
+    font-size: 50px !important;
+  }
+
+  main p {
+    padding-left: 2%;
+    font-size: 13px !important;
+    width: 86vw;
+  }
+
+  .group h4{
+    /* h4-h5-h6 style */
+    position: sticky;
+    font-size: 12px !important;
+  }
   /* styles for screen sizes 779px, should covers 'mobile' and 'tablet' */
   /* style this one first and then use the two others to 'override' some styles (exceptions/details) */
+  .progress-bar {
+    width: 3px;
+    background:rgba(165, 255, 113, 0.972);
+    border-radius: 3px;
+  }
 
+  .progress-container {
+    left: 5px;
+    width: 3px;  
+  }
 
   /* utilities */
 
